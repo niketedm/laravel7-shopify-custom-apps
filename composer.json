@@ -16,7 +16,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "2.*",
         "maatwebsite/excel": "^3.1",
-        "osiset/laravel-shopify": "^14.0"
+        "osiset/laravel-shopify": "^17.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
