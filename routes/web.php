@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', function () {
+    if (Auth::user()) {
+        return redirect()->route('home');
+    }
+    return view('login');
+})->name('login');
+
+Route::middleware(['auth.shopify'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+
+    // Other routes that need the shop user
+});
 
 Route::get('/', function () {
     return view('welcome');
